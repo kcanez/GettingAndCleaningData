@@ -23,6 +23,7 @@ combined_y <- rbind(test_y, train_y)
 combined_subj <- rbind(test_subject, train_subject)
 
 #Gathers columns containing mean or stdev data
+#The data looked to be 'patterned' fairly well so I gathered it using sequences, this turned out to be more work than it I'd anticipated, but it gathers the correct cols.
 colsNeeded <- c(
   rep(x = seq(from = 1, to = 90, by = 20), each = 6)+(0:5),
   rep(x = seq(from = 121, to = 200, by = 40), each = 6)+(0:5),
